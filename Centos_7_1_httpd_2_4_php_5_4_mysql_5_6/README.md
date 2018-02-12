@@ -23,7 +23,7 @@ phpMyAdminインストール済
 4.配置したディレクトリの中に移動
 
 5.boxの追加  
-'vagrant box add 任意のbox名 https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.1/vagrant-centos-7.1.box'
+`vagrant box add 任意のbox名 https://github.com/CommanderK5/packer-centos-template/releases/download/0.7.1/vagrant-centos-7.1.box`
 
 6.初期化  
 'vagrant init 任意のbox名'
@@ -38,4 +38,4 @@ phpMyAdminインストール済
 ※権限や共有フォルダなども、必要があれば適宜変更。
 
 9.vagrantの立ち上げ  
-'vagrant up'
+`vagrant up`
