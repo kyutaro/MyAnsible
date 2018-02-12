@@ -1,0 +1,21 @@
+#
+# phpMyAdmin - tasks
+#
+- name: install phpMyAdmin
+  yum: name=phpMyAdmin enablerepo=epel
+
+- name: change access
+  replace: >
+    dest=/etc/httpd/conf.d/phpMyAdmin.conf
+    regexp=" Deny from All"
+    replace=" #Deny from All"
+  notify:
+    - restart httpd
+        
+- name: add local_ip
+  blockinfile:
+    path=/etc/httpd/conf.d/phpMyAdmin.conf
+    insertafter='AddDefaultCharset UTF-8'
+    content='Require all granted'
+  notify:
+    - restart httpd

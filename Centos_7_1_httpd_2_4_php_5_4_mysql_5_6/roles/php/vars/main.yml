@@ -1,0 +1,7 @@
+#
+# PHP - vars
+#
+php_packages:
+    - php
+    - php-mbstring
+    - php-mysql

@@ -1,0 +1,12 @@
+- hosts: localhost #127.0.0.1だとcentos7系でなぜか動かない
+  connection: local
+  sudo: yes
+  roles:
+    - base
+    - httpd
+    - php
+    - mysql
+    - phpMyAdmin
+  handlers:
+    - name: restart httpd
+      service: name=httpd state=restarted

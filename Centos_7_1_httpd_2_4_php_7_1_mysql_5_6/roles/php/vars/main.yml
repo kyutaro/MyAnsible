@@ -1,0 +1,13 @@
+#
+# PHP - vars
+#
+php_packages:
+    - php
+    - php-mbstring
+    - php-mysql
+    - php-devel 
+    - php-mbstring 
+    - php-pdo 
+    - php-gd 
+    - php-xml 
+    - php-mcrypt

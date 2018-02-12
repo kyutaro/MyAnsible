@@ -1,0 +1,7 @@
+#
+# base - vars
+#
+base_packages:
+    - wget
+    - ntp
+    - vim

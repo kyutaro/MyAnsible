@@ -1,0 +1,13 @@
+#
+# PHP - tasks
+#
+- name: install PHP
+  yum: name={{item}} state=present enablerepo=remi,remi-php71
+  with_items:
+    - "{{ php_packages }}"
+
+- name: setting PHP
+  replace: >
+    dest=/etc/php.ini
+    regexp="^;date\.timezone ="
+    replace="date.timezone = Asia/Tokyo"

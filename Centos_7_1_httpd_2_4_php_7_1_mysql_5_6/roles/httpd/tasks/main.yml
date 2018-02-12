@@ -1,0 +1,32 @@
+#
+# Apache
+#
+- name: Install Apache
+  yum: name=httpd
+  
+- name: Start Apache
+  service: name=httpd state=started enabled=yes
+  
+- name: Setting DocumentRoot
+  replace: 
+    dest=/etc/httpd/conf/httpd.conf
+    regexp='DocumentRoot "/var/www/html"'
+    replace='DocumentRoot "/hostdev"'
+  notify:
+    - restart httpd
+    
+- name: Setting Directory
+  replace: 
+    dest=/etc/httpd/conf/httpd.conf
+    regexp='<Directory "/var/www">'
+    replace='<Directory "/hostdev">'
+  notify:
+    - restart httpd
+    
+- name: enable htaccess
+  replace: 
+    dest=/etc/httpd/conf/httpd.conf
+    regexp='AllowOverride None'
+    replace='AllowOverride All'
+  notify:
+    - restart httpd

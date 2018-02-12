@@ -1,0 +1,6 @@
+#
+# MySQL5.6 - vars
+#
+mysql_packages:
+    - mysql-server
+    - MySQL-python
