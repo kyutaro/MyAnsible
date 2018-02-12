@@ -29,6 +29,7 @@ phpMyAdminインストール済
 'vagrant init 任意のbox名'
 
 7.生成されたvagrantfileをgithub上のvagrantfileで上書き
+[vagrantfile](https://github.com/kyutaro/SettingFiles/blob/master/Vagrantfile_Centos_7_1_httpd_2_4_php_5_4_mysql_5_6)
 
 8.vagrantfile下記の事項を自分の環境に合わせて変更。
 `config.vm.box = "ansible_test_centos7_1"`

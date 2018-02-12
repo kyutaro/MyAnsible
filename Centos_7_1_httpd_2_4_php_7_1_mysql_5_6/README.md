@@ -11,7 +11,7 @@ phpMyAdminインストール済
 
 ## 手順
 
-1.github(https://github.com/kyutaro/MyAnsible)からファイルをDL
+1.[github](https://github.com/kyutaro/MyAnsible)からファイルをDL
 
 2.vagrantfileやansible関連ファイル等を置くための任意のディレクトリへ移動
 ※例 C:/Vagrant/MyAnsible/ など
@@ -29,6 +29,7 @@ phpMyAdminインストール済
 'vagrant init 任意のbox名'
 
 7.生成されたvagrantfileをgithub上のvagrantfileで上書き
+[vagrantfile](https://github.com/kyutaro/SettingFiles/blob/master/Vagrantfile_Centos_7_1_httpd_2_4_php_7_1_mysql_5_6)
 
 8.vagrantfile下記の事項を自分の環境に合わせて変更。
 `config.vm.box = "ansible_centos7_1_php7_1"`
